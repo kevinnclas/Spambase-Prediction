@@ -31,21 +31,10 @@ After the creation and selection of our final model, we decide to implement it i
 <br/>
 If you have installed Docker on your machine you can launch the flask application with those command in powershell or cmd.
 <br>
+```cmd
+# pull the image from docker hub
+docker pull ikhlo/spam 
+
+# run a container on port 5000
+docker run -p 5000:5000 ikhlo/spam 
 ```
-> docker pull ikhlo/spam
-> docker run -p 5000:5000 ikhlo/spam
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
