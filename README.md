@@ -1,6 +1,6 @@
 # Implementation of a Machine Learning model detecting spam mails
 
-For this project, the main task was to create a Machine Learning model able to diffrenciate a spam from a real mail and implement it into an API.
+For this project, the main task was to create a Machine Learning model able to differenciate a spam from a real mail and implement it into an API.
 
 ## Machine Learning model
 <br/>
