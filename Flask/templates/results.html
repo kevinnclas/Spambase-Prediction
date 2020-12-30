@@ -1,0 +1,102 @@
+{% include 'icon_web.html' %}
+
+{% include 'navigation.html' %}
+
+<html>
+    <head>
+
+        <style>
+
+            #footer {
+                font-family: Arial, Helvetica, sans-serif;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            button {
+                border: none;
+                background-color: transparent;
+                color: white;
+                padding: 13px 26px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                transition-duration: 0.4s;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #9a32ca;
+                color: white;
+            }
+        </style>
+    </head>
+
+    {% if data == "0" %}
+        <head>
+            <style>
+                body {
+                    text-align: center;
+                    font-family: Arial, Helvetica, sans-serif;
+                    animation: clignotement 10s infinite;
+                }
+                @keyframes clignotement {
+                    50% {
+                        background-color: rgb(94, 255, 0);
+                    }
+                }
+
+                h1 {
+                    color: rgb(255, 255, 255);
+                }
+            </style>
+        </head>
+        <body>
+                <br></br>
+                <h1> No worries, this mail is not a SPAM ! </h1>
+                <img src = "static\mail_safe.jpg" width = "600px" height = "300px">
+        </body>
+    {% endif %}
+
+    {% if data == "1" %}
+        <head>
+            <style>
+                body {
+                    text-align: center;
+                    font-family: Arial, Helvetica, sans-serif;
+                    animation: clignotement 2s infinite;
+                }
+                @keyframes clignotement {
+                    50% {
+                        background-color: rgb(255, 30, 0);
+                    }
+                }
+
+                h1 {
+                    color: rgb(255, 255, 255);
+                }
+            </style>
+        </head>
+        <body>
+                <br></br>
+                <h1> Warning, this mail is a SPAM ! </h1>
+                <img src = "static\spam.jpg" width = "600px" height = "300px">
+        </body>
+    {% endif %}
+
+    <body>
+        <br></br>
+        <br></br>
+        <a href = "/">
+            <button> Go back to home page </button>
+        </a>
+        <br></br>
+        <div id = "footer">
+            <p> © 2020 Copyright: NICOLAS Kevin & YAYA-OYE Ikhlass </p>
+        </div>
+    </body>
+</html>

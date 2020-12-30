@@ -1,0 +1,103 @@
+{% include 'icon_web.html' %}
+
+{% include 'navigation.html' %}
+
+<html>
+    <head>
+
+        <style>
+            body {
+                background-color: rgb(252, 247, 255);
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #footer {
+                font-family: Arial, Helvetica, sans-serif;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .btn {
+                border: none;
+                background-color: rgb(40, 40, 40);
+                color: white;
+                padding: 13px 26px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                transition-duration: 0.4s;
+                cursor: pointer;
+            }
+
+            input[type = "submit"].btn:hover {
+                background-color: #9a32ca;
+                color: white;
+            }
+
+            textarea {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15;
+            }
+
+            .colortext {
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <br></br>
+        <h1> Example of a <span class = "colortext">Spam</span> that is well detected as a <span class = "colortext">Spam</span> </h1>
+        <br></br>
+        <form method = "POST", action = "{{url_for('page_pred')}}">
+            <p>
+                This is our mail example :
+            </p>
+            <textarea rows = "11" cols = "80" name = "email" required>
+ith the Holidays approaching quickly...
+                CONTROL YOUR WEIGHT!!
+            Don't let your weight control you!
+
+Find Out How You Can Lose Weight Naturally & Effectively.
+Enjoy A New Level Of ENERGY.  Convert Your FAT Into ENERGY.
+New Herbal Formula That Has Virtually Eliminated The Need To Diet! To
+Find Out More Information On This Incredible New Product E-Mail:
+products98@hotmail.com  And type "Request More Info" in the Subject
+Line.
+
+
+`|||/                   Wishing you the Best!
+(@@)             Don't let the Holidays Gobble You Up!
+ooO()_Ooo__HAPPY HOLIDAYS!__ 
+||||||||__
+|__|__||||||__|__
+_|____Please pardon the intrusion|||__ If this
+announcement is of no interest to you we are deeply sorry and
+apologize for any inconvenience. If you wish to be removed from our
+database please E-Mail:   getmeoff98@hotmail.com And type "Remove" in
+the Subject line and Message body and press send!! It's that  easy!!
+            </textarea>
+            <br></br>
+            <p>
+                <em>Just press the Predict button below</em>
+            </p>
+            <br></br>
+
+            <input class = "btn" type = "submit" value = "Predict">
+        </form>
+
+        <br></br>
+        <br></br>
+        <footer>
+            <div id = "footer">
+                <p> © 2020 Copyright: NICOLAS Kevin & YAYA-OYE Ikhlass </p>
+            </div>
+        </footer>
+    </body>
+    
+</html>

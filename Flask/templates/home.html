@@ -1,0 +1,76 @@
+{% include 'icon_web.html' %}
+
+{% include 'navigation.html' %}
+
+<html>
+    <head>
+
+        <style>
+            body {
+                background-color: rgb(252, 247, 255);
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #footer {
+                font-family: Arial, Helvetica, sans-serif;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .btn {
+                border: none;
+                background-color: rgb(40, 40, 40);
+                color: white;
+                padding: 13px 26px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                transition-duration: 0.4s;
+                cursor: pointer;
+            }
+
+            input[type = "submit"].btn:hover {
+                background-color: #9a32ca;
+                color: white;
+            }
+
+            textarea {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15;
+            }
+        </style>
+    </head>
+
+    <body>
+        <br></br>
+        <h1> Welcome to our Spambase prediction </h1>
+        <br></br>
+        <form method = "POST", action = "{{url_for('page_pred')}}">
+            <p>
+                Type your own mail here :
+            </p>
+            <textarea rows = "11" cols = "80" name = "email" placeholder = "ex : Hello, you won..." required></textarea>
+            <br></br>
+            <p>
+                <em>Send your email for Prediction by clicking the button below</em>
+            </p>
+            <br></br>
+
+            <input class = "btn" type = "submit" value = "Predict">
+        </form>
+
+        <br></br>
+        <br></br>
+        <footer>
+            <div id = "footer">
+                <p> © 2020 Copyright: NICOLAS Kevin & YAYA-OYE Ikhlass </p>
+            </div>
+        </footer>
+    </body>
+    
+</html>

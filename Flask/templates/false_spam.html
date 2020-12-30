@@ -1,0 +1,97 @@
+{% include 'icon_web.html' %}
+
+{% include 'navigation.html' %}
+
+<html>
+    <head>
+
+        <style>
+            body {
+                background-color: rgb(252, 247, 255);
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #footer {
+                font-family: Arial, Helvetica, sans-serif;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .btn {
+                border: none;
+                background-color: rgb(40, 40, 40);
+                color: white;
+                padding: 13px 26px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                transition-duration: 0.4s;
+                cursor: pointer;
+            }
+
+            input[type = "submit"].btn:hover {
+                background-color: #9a32ca;
+                color: white;
+            }
+
+            textarea {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15;
+            }
+
+            .colorgreen {
+                color: rgb(0, 214, 0);
+            }
+            
+            .colorred {
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <br></br>
+        <h1> Example of a <span class = "colorgreen">Safe Mail</span> that is detected as a <span class = "colorred">Spam</span> </h1>
+        <br></br>
+        <form method = "POST", action = "{{url_for('page_pred')}}">
+            <p>
+                This is our mail example :
+            </p>
+            <textarea rows = "11" cols = "80" name = "email" required>
+Thank you for your interest in Dassault Systèmes!
+You just started your journey with the 3DEXPERIENCE Company. We hope your experience will be a pleasant one.
+
+Your application for the position of STAGE – Data Analyst / Data Science – Implémentation d’algorithmes de prédiction (H/F) - 517221 will be carefully evaluated by our Talent Acquisition Team and we will reach out to you shortly to notify you of its progress. In the meantime, we invite you to follow Dassault Systèmes career pages on our social media.
+
+If you would like to follow up your application, click here.
+
+We wish you every success in your search for career development.
+
+Kind regards,
+3DS Talent Acquisition & Mobility
+Dassault Systèmes
+            </textarea>
+            <br></br>
+            <p>
+                <em>Just press the Predict button below</em>
+            </p>
+            <br></br>
+
+            <input class = "btn" type = "submit" value = "Predict">
+        </form>
+
+        <br></br>
+        <br></br>
+        <footer>
+            <div id = "footer">
+                <p> © 2020 Copyright: NICOLAS Kevin & YAYA-OYE Ikhlass </p>
+            </div>
+        </footer>
+    </body>
+    
+</html>

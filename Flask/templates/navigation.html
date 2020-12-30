@@ -1,0 +1,48 @@
+<html>  
+  <head>
+    <style>
+      #ul_navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: rgb(40, 40, 40);
+      position: sticky;
+      top: 0;
+      }
+
+      li {
+          float: left;
+      }
+
+      li a {
+          display: block;
+          color: rgb(255, 255, 255);
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+      }
+
+      li a:hover:not(.active) {
+          background-color: rgb(104, 104, 104);
+      }
+
+      .active {
+          background-color: #9a32ca;
+      }
+
+    </style>
+  </head>
+
+  {% block navbar %}
+    <body id = "navigationbar">
+      <ul id = "ul_navbar">
+        <li><a class="active" href="/">Spambase Prediction</a></li>
+        <li><a href="/TrueSpam">True Spam</a></li>
+        <li><a href="/FalseSpam">False Spam</a></li>
+        <li><a href="/TrueSafeMail">True Safe Mail</a></li>
+        <li><a href="/FalseSafeMail">False Safe Mail</a></li>
+      </ul>
+    </body>
+  {% endblock %}
+</html>

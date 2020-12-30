@@ -1,0 +1,94 @@
+{% include 'icon_web.html' %}
+
+{% include 'navigation.html' %}
+
+<html>
+    <head>
+
+        <style>
+            body {
+                background-color: rgb(252, 247, 255);
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #footer {
+                font-family: Arial, Helvetica, sans-serif;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .btn {
+                border: none;
+                background-color: rgb(40, 40, 40);
+                color: white;
+                padding: 13px 26px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                transition-duration: 0.4s;
+                cursor: pointer;
+            }
+
+            input[type = "submit"].btn:hover {
+                background-color: #9a32ca;
+                color: white;
+            }
+
+            textarea {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15;
+            }
+
+            .colortext {
+                color: rgb(0, 214, 0);
+            }
+        </style>
+    </head>
+
+    <body>
+        <br></br>
+        <h1> Example of a <span class = "colortext">Safe Mail</span> that is well detected as a <span class = "colortext">Safe Mail</span> </h1>
+        <br></br>
+        <form method = "POST", action = "{{url_for('page_pred')}}">
+            <p>
+                This is our mail example :
+            </p>
+            <textarea rows = "11" cols = "80" name = "email" required>
+A sign in attempt requires further verification because we did not recognize your device. To complete the sign in, enter the verification code on the unrecognized device.
+
+Device: Firefox on Windows
+Verification code: 212431
+
+If you did not attempt to sign in to your account, your password may be compromised. Visit https://github.com/settings/security to create a new, strong password for your GitHub account.
+
+If you'd like to automatically verify devices in the future, consider enabling two-factor authentication on your account. Visit https://docs.github.com/articles/configuring-two-factor-authentication to learn about two-factor authentication.
+
+If you decide to enable two-factor authentication, ensure you retain access to one or more account recovery methods. See https://docs.github.com/articles/configuring-two-factor-authentication-recovery-methods in the GitHub Help.
+
+Thanks,
+The GitHub Team
+            </textarea>
+            <br></br>
+            <p>
+                <em>Just press the Predict button below</em>
+            </p>
+            <br></br>
+
+            <input class = "btn" type = "submit" value = "Predict">
+        </form>
+
+        <br></br>
+        <br></br>
+        <footer>
+            <div id = "footer">
+                <p> © 2020 Copyright: NICOLAS Kevin & YAYA-OYE Ikhlass </p>
+            </div>
+        </footer>
+    </body>
+    
+</html>
